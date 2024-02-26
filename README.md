@@ -79,7 +79,7 @@ tensorflow.python.framework.errors_impl.InvalidArgumentError: {{function_node __
 	 [[MultiDeviceIteratorGetNextFromShard]]
 	 [[RemoteCall]] [Op:IteratorGetNext] name:
 ```
-After looking for solutions online, it appears that the error might be due to the coordinates of the bounding box for the annotations of some images.  
+After looking for [solutions](https://github.com/tensorflow/models/issues/8595#issuecomment-711424184) online, it appears that the error might be due to the coordinates of the bounding box for the annotations of some images.  
 The types of errors in this could be:  
 	a. Negative values  
 	b. Value out of bounds (more than the height/width)  
