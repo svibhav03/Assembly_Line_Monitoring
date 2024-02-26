@@ -1,6 +1,8 @@
 # Assembly_Line_Monitoring
 Object Detection project for iotiot.in internship
 
+Google Colab Link: https://colab.research.google.com/drive/1rOo6YP1T1l7WS19s5Bvzcd5OEGhFUIEd?usp=sharing
+
 ## Problem Statement: Automated Product Classification and Counting
 In modern manufacturing companies, there is a need for efficient and reliable **classification and counting** of packaged products as they pass on a conveyor belt. A well trained object detection model will make this highly efficient and minimize human error.
 ### Goal:
