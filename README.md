@@ -84,4 +84,6 @@ The types of errors in this could be:
 	a. Negative values  
 	b. Value out of bounds (more than the height/width)  
 	c. xmin > xmax or ymin > ymax  
+Derived my solution from [this](https://stackoverflow.com/questions/62075321/tensorflow-python-framework-errors-impl-invalidargumenterror-invalid-argument) comment to resolve the issue.
+
 
