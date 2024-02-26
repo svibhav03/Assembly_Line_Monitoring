@@ -62,9 +62,14 @@ for i in range(len(annots)):
 ```
 
 ## Errors encountered:
-1. After running the training command, no case found.
-Found a solution online on github community. The error is associated with the naming of certain model files ......
-Resolved by following this
+1. After running the training command, we encountered the following error:
+```
+attributeerror: module 'tensorflow.python.ops.control_flow_ops' has no attribute 'case'
+```
+Found a solution online on github community. The error is associated with the naming of certain model files and inconsistent tensorflow versions.  
+
+Resolved by following [this comment](https://github.com/tensorflow/models/issues/11099#issuecomment-1902615454)  
+
 2. After running the training command, we are encountering the following error:
 ```
 tensorflow.python.framework.errors_impl.InvalidArgumentError: {{function_node __wrapped__IteratorGetNext_output_types_16_device_/job:localhost/replica:0/task:0/device:CPU:0}} assertion failed: [[0.109177209][0.571202576][0.136075944]] [[0.422468364][0.354430407][0.481012702]]
@@ -72,4 +77,9 @@ tensorflow.python.framework.errors_impl.InvalidArgumentError: {{function_node __
 	 [[MultiDeviceIteratorGetNextFromShard]]
 	 [[RemoteCall]] [Op:IteratorGetNext] name:
 ```
-After looking for solutions online, it appears that
+After looking for solutions online, it appears that the error might be due to the coordinates of the bounding box for the annotations of some images.  
+The types of errors in this could be:  
+	a. Negative values  
+	b. Value out of bounds (more than the height/width)  
+	c. xmin > xmax or ymin > ymax  
+
